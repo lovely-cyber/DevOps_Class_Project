@@ -1,3 +1,4 @@
+baseURL = "https://lovely-cyber.github.io/DevOps_Class_Project/"
 contentdir    = "content"
 layoutdir     = "layouts"
 publishdir    = "public"
