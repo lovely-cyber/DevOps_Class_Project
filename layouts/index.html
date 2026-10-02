@@ -1,0 +1,13 @@
+{{ define "main" }}
+<h1 class="title">{{ .Site.Title }}</h1>
+<div class="intro">{{ .Content }}</div>
+{{ range .Site.RegularPages }}
+<article>
+<h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+<p class="meta">Posted on {{ .Date.Format "January 2, 2006" }} | Onur Yilmaz</p>
+<p>{{ .Summary | plainify }}</p>
+<p class="tags">{{ range .Params.tags }}<a href="#">#{{ . }}</a>{{ end }}</p>
+<p><a href="{{ .RelPermalink }}"><strong>[Read More]</strong></a></p>
+</article>
+{{ end }}
+{{ end }}
